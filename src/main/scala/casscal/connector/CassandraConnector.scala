@@ -1,3 +1,5 @@
+package casscal.connector
+
 import com.datastax.oss.driver.api.core.CqlSession
 import com.datastax.oss.driver.internal.core.ContactPoints
 import sun.security.util.Password
