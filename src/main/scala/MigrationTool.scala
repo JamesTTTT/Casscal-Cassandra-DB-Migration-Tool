@@ -6,7 +6,7 @@ import scala.jdk.CollectionConverters.*
 import casscal.config.Config
 object MigrationTool {
   def main(args: Array[String]): Unit = {
-    CommandLineParser.cmdParse(args) match {
+    CommandLineParser.parse(args) match {
       case Some(config) =>
         val session = CassandraConnector.createSession(
           contactPoints = config.contactPoints.toList,

@@ -12,16 +12,16 @@ object CassandraConnector {
                     username: Option[String] = None,
                     password: Option[String] = None): CqlSession = {
 
-    val builder = CqlSession.builder().build()
-      .addContactPoints(contactPoints.map(InetSocketAddress.createUnresolved(-, port)))
+    val builder = CqlSession.builder()
+
+    contactPoints.foreach(cp => builder.addContactPoint(new InetSocketAddress(cp, port)))
 
     keyspace.foreach(builder.withKeyspace)
 
-    (username, password) match{
+    (username, password) match {
       case (Some(u), Some(p)) => builder.withAuthCredentials(u, p)
       case _ =>
     }
-
 
     builder.build()
   }

@@ -10,7 +10,8 @@ lazy val root = (project in file("."))
     name := "casscal",
     libraryDependencies ++= Seq(
       javaCore,
-      javaQueryBuilder
+      javaQueryBuilder,
+      OParser
     ),
     assembly / mainClass := Some("MigrationTool")
 
