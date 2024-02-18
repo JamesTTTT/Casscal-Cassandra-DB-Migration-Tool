@@ -13,7 +13,8 @@ object MigrationTool {
           port = config.port,
           keyspace = config.keyspace,
           username = config.username,
-          password = config.password
+          password = config.password,
+          localDatacenter = config.localDatacenter
         )
         val migrationFolderPath = config.migrationFilePath
 
