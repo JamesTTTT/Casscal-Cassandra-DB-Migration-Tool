@@ -1,9 +1,11 @@
+package casscal
+import casscal.config.Config
 import casscal.connector.CassandraConnector
 import casscal.parser.CommandLineParser
 import com.datastax.oss.driver.api.core.CqlSession
 import java.nio.file.{Files, Paths}
 import scala.jdk.CollectionConverters.*
-import casscal.config.Config
+
 object MigrationTool {
   def main(args: Array[String]): Unit = {
     CommandLineParser.parse(args) match {
