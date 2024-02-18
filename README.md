@@ -25,5 +25,3 @@ casscal --username myUsername --password myPassword --keyspace myKeyspace --port
 ```shell
 casscal --contactPoints "127.0.0.1,192.168.1.2" -u username -p password -k keyspace -o 9042 -l "/path/to/migrations"
 ```
-
-![casscalLogo](https://github.com/JamesTTTT/Casscal-Cassandra-DB-Migration-Tool/assets/66074363/9a815b94-1cf1-4f97-9cf7-6f049d8da772)
