@@ -1,0 +1,2 @@
+#!/bin/bash
+scala -jar target/scala-3.4.0/casscal-assembly-0.1.0-SNAPSHOT.jar "$@"

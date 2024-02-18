@@ -5,6 +5,15 @@ This is a tool i have created for myself to easily simplify Casssandra database 
 
 The tool is entirely written in Scala 3.4
 
+### Install  tool
+1. `git clone git@github.com:JamesTTTT/Casscal-Cassandra-DB-Migration-Tool.git`
+2. `cd Casscal-Cassandra-DB-Migration-Tool`
+3. `sbt clean assembly`
+4. `chmod +x casscal`
+5. `sudo mv casscal /usr/local/bin/`
+6. Running the program in CLI: `casscal [options]`
+
+### Flags
 | Flag (Short) | Flag (Long)           | Description                                  | Input Type |
 |--------------|-----------------------|----------------------------------------------|------------|
 | `-u`         | `--username`          | Username for Cassandra authentication        | String     |
