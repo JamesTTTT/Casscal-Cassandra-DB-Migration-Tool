@@ -19,6 +19,9 @@ object CommandLineParser {
       opt[Int]('o', "port")
         .action((x, c) => c.copy(port = x))
         .text("Port to connect to Cassandra"),
+      opt[String]("datacenter")
+        .action((x, c) => c.copy(localDatacenter = x))
+        .text("Local datacenter for Cassandra connection"),
       opt[String]('l', "migrationFilePath")
         .action((x, c) => c.copy(migrationFilePath = x))
         .text("Location for migrations folder")
