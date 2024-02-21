@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
       javaQueryBuilder,
       OParser
     ),
-    assembly / mainClass := Some("casscal.MigrationTool")
+    assembly / mainClass := Some("casscal.cli.MigrationTool")
 
   )
 
