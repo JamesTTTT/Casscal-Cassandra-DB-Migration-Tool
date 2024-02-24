@@ -5,6 +5,7 @@ import casscal.connector.CassandraConnector
 import casscal.parser.CommandLineParser
 import casscal.utils.util.{applyMigration, getMigrationFiles}
 import com.datastax.oss.driver.api.core.CqlSession
+import casscal.version.VersionTracker
 
 import java.nio.file.{Files, Paths}
 import scala.jdk.CollectionConverters.*
@@ -24,6 +25,7 @@ object MigrationTool {
         val migrationFolderPath = config.migrationFilePath
 
         try {
+          VersionTracker.createVersionTable(session)
           val migrationFiles = getMigrationFiles(migrationFolderPath)
           migrationFiles.foreach(applyMigration(_, session))
         } finally {
@@ -33,8 +35,5 @@ object MigrationTool {
     }
 
   }
-
-
-
 
 }
